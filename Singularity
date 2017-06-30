@@ -33,7 +33,7 @@ cp -r cellranger_onepermil/* $SINGULARITY_ROOTFS/opt/cellranger_onepermil/
 #cp -r cellranger_refdata/* $SINGULARITY_ROOTFS/opt/cellranger_refdata/
 
 
-cp cellranger-2.0.0 $SINGULARITY_ROOTFS/opt/
+cp -r cellranger-2.0.0 $SINGULARITY_ROOTFS/opt/
 #cp cellranger-2.0.0.tar.gz $SINGULARITY_ROOTFS/opt/
 #cp refdata/refdata-cellranger-ercc92-1.2.0.tar.gz  $SINGULARITY_ROOTFS/opt/
 
@@ -52,7 +52,7 @@ cp cellranger-2.0.0 $SINGULARITY_ROOTFS/opt/
 %post
   # this is run inside the container to install all necessary packages
 
-  apt-get install nano unzip
+  apt-get install nano unzip zip
 
   cd /opt
   
