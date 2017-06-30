@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -x
+
+mkdir ./cellranger_onepermil
+cp -r /opt/cellranger_onepermil ./
+
+cd cellranger_onepermil
+
+set +x 
