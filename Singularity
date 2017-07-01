@@ -23,17 +23,11 @@ mkdir -p $SINGULARITY_ROOTFS/projects/ps-scrm
 mkdir -p $SINGULARITY_ROOTFS/oasis/projects/nsf
 mkdir -p $SINGULARITY_ROOTFS/media/mis
 
-mkdir -p $SINGULARITY_ROOTFS/opt/cellranger
-cp -r cellranger/* $SINGULARITY_ROOTFS/opt/cellranger/
-
-mkdir -p $SINGULARITY_ROOTFS/opt/cellranger_onepermil
-cp -r cellranger_onepermil/* $SINGULARITY_ROOTFS/opt/cellranger_onepermil/
-
-#mkdir -p $SINGULARITY_ROOTFS/opt/cellranger_refdata
-#cp -r cellranger_refdata/* $SINGULARITY_ROOTFS/opt/cellranger_refdata/
-
-
+cp -r bin              $SINGULARITY_ROOTFS/opt/
+cp -r cellrangerdemo   $SINGULARITY_ROOTFS/opt/
 cp -r cellranger-2.0.0 $SINGULARITY_ROOTFS/opt/
+#cp -r refdata/*       $SINGULARITY_ROOTFS/opt/
+
 #cp cellranger-2.0.0.tar.gz $SINGULARITY_ROOTFS/opt/
 #cp refdata/refdata-cellranger-ercc92-1.2.0.tar.gz  $SINGULARITY_ROOTFS/opt/
 
@@ -54,13 +48,10 @@ cp -r cellranger-2.0.0 $SINGULARITY_ROOTFS/opt/
 
   apt-get install nano unzip zip
 
-
-
-#  cd /opt
-#  wget wget -O cellranger-2.0.0.tar.gz "http://cf.10xgenomics.com/releases/cell-exp/cellranger-2.0.0.tar.gz?Expires=1498884401&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cDovL2NmLjEweGdlbm9taWNzLmNvbS9yZWxlYXNlcy9jZWxsLWV4cC9jZWxscmFuZ2VyLTIuMC4wLnRhci5neiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTQ5ODg4NDQwMX19fV19&Signature=XXAmQ-kR~g~QuQnxU3AU6spcFYmXCSMMp0AUYET1a6gIq~~yaDmbe0vzcQdUtHZkDEo8~QezvKLeCVQ77IaqTaPUZd1rvdVVbmZ6bjy~St3fWcRoMOD1Pml6qpH-t7KG18z~eGnkBdCC8P7LC68grTIKsKfr8ipE1-5JTTntFN39vHpCZKOUgTp1qG6YuKMVOBMcq3Nt9dr3LScRoioPTHulAdFWTcG0V~5HQDgzwWlHiT-LIUL-ndhLBPh~hTbr8kOSbwLssO-hR1VNzvzbC6XA9vjst6CxDYj4cK4snrLZLxgXmwVK9zKqE2VjRpdWZMA-itAeelgjZp9c3x~q3g__&Key-Pair-Id=APKAI7S6A5RYOXBWRPDA"
-#  tar -xzvf cellranger-2.0.0.tar.gz
-#  rm cellranger-2.0.0.tar.gz
-
+  #  cd /opt
+  #  wget wget -O cellranger-2.0.0.tar.gz "http://cf.10xgenomics.com/releases/cell-exp/cellranger-2.0.0.tar.gz?Expires=1498884401&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cDovL2NmLjEweGdlbm9taWNzLmNvbS9yZWxlYXNlcy9jZWxsLWV4cC9jZWxscmFuZ2VyLTIuMC4wLnRhci5neiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTQ5ODg4NDQwMX19fV19&Signature=XXAmQ-kR~g~QuQnxU3AU6spcFYmXCSMMp0AUYET1a6gIq~~yaDmbe0vzcQdUtHZkDEo8~QezvKLeCVQ77IaqTaPUZd1rvdVVbmZ6bjy~St3fWcRoMOD1Pml6qpH-t7KG18z~eGnkBdCC8P7LC68grTIKsKfr8ipE1-5JTTntFN39vHpCZKOUgTp1qG6YuKMVOBMcq3Nt9dr3LScRoioPTHulAdFWTcG0V~5HQDgzwWlHiT-LIUL-ndhLBPh~hTbr8kOSbwLssO-hR1VNzvzbC6XA9vjst6CxDYj4cK4snrLZLxgXmwVK9zKqE2VjRpdWZMA-itAeelgjZp9c3x~q3g__&Key-Pair-Id=APKAI7S6A5RYOXBWRPDA"
+  #  tar -xzvf cellranger-2.0.0.tar.gz
+  #  rm cellranger-2.0.0.tar.gz
 
   #wget http://cf.10xgenomics.com/supp/cell-exp/refdata-cellranger-GRCh38-1.2.0.tar.gz
   #tar -xzvf refdata-cellranger-GRCh38-1.2.0.tar.gz
@@ -70,42 +61,38 @@ cp -r cellranger-2.0.0 $SINGULARITY_ROOTFS/opt/
   #rm refdata-cellranger-hg19-1.2.0.tar.gz
   #wget-http://cf.10xgenomics.com/supp/cell-exp/refdata-cellranger-mm10-1.2.0.tar.gz
   #tar -xzvf refdata-cellranger-hg19-1.2.0.tar.gz
-  rm refdata-cellranger-hg19-1.2.0.tar.gz
+  #rm refdata-cellranger-hg19-1.2.0.tar.gz
   #wget http://cf.10xgenomics.com/supp/cell-exp/refdata-cellranger-hg19-and-mm10-1.2.0.tar.gz
   #tar -xzvf refdata-cellranger-hg19-and-mm10-1.2.0.tar.gz
-  rm refdata-cellranger-hg19-and-mm10-1.2.0.tar.gz
+  #rm refdata-cellranger-hg19-and-mm10-1.2.0.tar.gz
   #wget http://cf.10xgenomics.com/supp/cell-exp/refdata-cellranger-ercc92-1.2.0.tar.gz
   #tar -xzvf refdata-cellranger-ercc92-1.2.0.tar.gz
   #rm refdata-cellranger-ercc92-1.2.0.tar.gz
   
   #ln -s /opt/cellranger-2.0.0/cellranger-tiny-ref/1.2.0   /opt/cellranger_refdata/refdata-cellranger-tiny-ref-1.2.0
   
-  
   #wget http://cf.10xgenomics.com/supp/cell-exp/chromium-shared-sample-indexes-plate.json
   #wget http://cf.10xgenomics.com/supp/cell-exp/chromium-shared-sample-indexes-plate.csv
 
 #  cd -
-
 
 ###############################################################################
 %labels
 
 MAINTAINER adomissy@ucsd.edu
 VERSION 0.0.1
-BUILD_DATE 20170630
-
+BUILD_DATE 20170701
 
 ###############################################################################
 %environment
 
-  PATH="/opt/conda/bin:/usr/local/bin:/usr/bin:/bin:"
+  PATH=/opt/conda/bin:/usr/local/bin:/usr/bin:/bin
   PATH=/opt/bin:$PATH
   PATH=/opt/cellranger-2.0.0:$PATH
   export PATH
 
-  REFDATA=../refdata
+  REFDATA=./
   export REFDATA
-
 
 ###############################################################################
 %runscript
@@ -116,11 +103,8 @@ BUILD_DATE 20170630
   #echo "Arguments received: $*"
   #exec /usr/bin/python "$@"
   
+  /opt/cellranger-2.0.0/cellranger $@
   
-  cellranger $@
-  
-  
-
 
 ###############################################################################
 %test
