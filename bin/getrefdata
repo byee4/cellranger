@@ -2,15 +2,12 @@
 
 SPECIES=$1
 
-if [ -z $SPECIES ]
+if [ $SPECIES = GRCh38 ] || [ $SPECIES = hg19 ] || [ $SPECIES = mm10 ] || [ $SPECIES = ercc92]
 then
-  echo available species are : GRCh38 hg19 mm10 ercc92
-else
   wget http://cf.10xgenomics.com/supp/cell-exp/refdata-cellranger-${SPECIES}-1.2.0.tar.gz
   tar -xzvf refdata-cellranger-${SPECIES}-1.2.0.tar.gz
   rm refdata-cellranger-${SPECIES}-1.2.0.tar.gz
+else
+  echo available species are : GRCh38 hg19 mm10 ercc92
 fi
-
-
-
 
