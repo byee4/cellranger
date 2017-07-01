@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-
 wget http://cf.10xgenomics.com/supp/cell-exp/refdata-cellranger-hg19-1.2.0.tar.gz
 
 tar -xzvf refdata-cellranger-hg19-1.2.0.tar.gz
+
+rm refdata-cellranger-hg19-1.2.0.tar.gz
+
 

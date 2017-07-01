@@ -24,7 +24,7 @@ mkdir -p $SINGULARITY_ROOTFS/oasis/projects/nsf
 mkdir -p $SINGULARITY_ROOTFS/media/mis
 
 cp -r bin              $SINGULARITY_ROOTFS/opt/
-cp -r cellrangerdemo   $SINGULARITY_ROOTFS/opt/
+cp -r demo             $SINGULARITY_ROOTFS/opt/
 cp -r cellranger-2.0.0 $SINGULARITY_ROOTFS/opt/
 #cp -r refdata/*       $SINGULARITY_ROOTFS/opt/
 
@@ -34,13 +34,7 @@ cp -r cellranger-2.0.0 $SINGULARITY_ROOTFS/opt/
 ###############################################################################
 %files
 
-  #cellranger/cellranger1  /opt/cellranger/
-  #cellranger/cellranger2  /opt/cellranger/
-  #cellranger/cellranger3  /opt/cellranger/
-  #cellranger/cellranger3  /opt/cellranger/
-
   #cellranger-2.0.0.tar.gz                 /opt/
-  #refdata/refdata-cellranger-ercc92-1.2.0.tar.gz  /opt/
 
 ###############################################################################
 %post
@@ -102,9 +96,18 @@ BUILD_DATE 20170701
   #####!/usr/bin/env bash
   #echo "Arguments received: $*"
   #exec /usr/bin/python "$@"
+
+  SUBCOMMAND=$1
   
-  /opt/cellranger-2.0.0/cellranger $@
-  
+  if [ $SUBCOMMAND = "downloadhg19refdata" ]
+  then
+    /opt/downloadrefdata
+  elif [ $SUBCOMMAND = "copydemofastqs"
+  then
+    /opt/copydemofastqs
+  else
+    /opt/cellranger-2.0.0/cellranger $@
+  fi
 
 ###############################################################################
 %test
