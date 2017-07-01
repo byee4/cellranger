@@ -84,7 +84,7 @@ BUILD_DATE 20170701
   
   if [ $SUBCOMMAND = "getrefdata" ]
   then
-    /opt/bin/getdemo $2
+    /opt/bin/getrefdata $2
   elif [ $SUBCOMMAND = "getdemo" ]
   then
     /opt/bin/getdemo
