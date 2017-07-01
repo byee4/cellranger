@@ -88,7 +88,8 @@ BUILD_DATE 20170701
   elif [ $SUBCOMMAND = "getfastqs" ]
   then
     /opt/bin/getfastqs
-  else
+  elif
+  then
     /opt/cellranger-2.0.0/cellranger $@
   fi
 
