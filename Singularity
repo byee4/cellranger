@@ -99,12 +99,12 @@ BUILD_DATE 20170701
 
   SUBCOMMAND=$1
   
-  if [ $SUBCOMMAND = "downloadhg19refdata" ]
+  if [ $SUBCOMMAND = "getrefdata" ]
   then
-    /opt/downloadrefdata
-  elif [ $SUBCOMMAND = "copydemofastqs"
+    /opt/getrefdata $2
+  elif [ $SUBCOMMAND = "getfastqs"
   then
-    /opt/copydemofastqs
+    /opt/getfastqs
   else
     /opt/cellranger-2.0.0/cellranger $@
   fi
