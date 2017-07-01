@@ -26,7 +26,6 @@ mkdir -p $SINGULARITY_ROOTFS/media/mis
 cp -r bin              $SINGULARITY_ROOTFS/opt/
 cp -r demo             $SINGULARITY_ROOTFS/opt/
 cp -r cellranger-2.0.0 $SINGULARITY_ROOTFS/opt/
-#cp -r refdata/*       $SINGULARITY_ROOTFS/opt/
 
 #cp cellranger-2.0.0.tar.gz $SINGULARITY_ROOTFS/opt/
 #cp refdata/refdata-cellranger-ercc92-1.2.0.tar.gz  $SINGULARITY_ROOTFS/opt/
@@ -68,7 +67,7 @@ cp -r cellranger-2.0.0 $SINGULARITY_ROOTFS/opt/
   #wget http://cf.10xgenomics.com/supp/cell-exp/chromium-shared-sample-indexes-plate.json
   #wget http://cf.10xgenomics.com/supp/cell-exp/chromium-shared-sample-indexes-plate.csv
 
-#  cd -
+  #  cd -
 
 ###############################################################################
 %labels
