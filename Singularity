@@ -84,10 +84,10 @@ BUILD_DATE 20170701
   
   if [ $SUBCOMMAND = "getrefdata" ]
   then
-    /opt/bin/getrefdata $2
-  elif [ $SUBCOMMAND = "getfastqs" ]
+    /opt/bin/getdemo $2
+  elif [ $SUBCOMMAND = "getdemo" ]
   then
-    /opt/bin/getfastqs
+    /opt/bin/getdemo
   else
     /opt/cellranger-2.0.0/cellranger $@
   fi
