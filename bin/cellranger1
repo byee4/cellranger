@@ -50,7 +50,6 @@ SPECIES=$3
 $JOBNAME=$4
 
 
-
 mkdir -p results/temp
 touch results/CELLRANGER1-JOB-COPY.${JOBNAME}.txt
 touch results/CELLRANGER1-VERSION-2.0.0

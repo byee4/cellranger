@@ -1,1 +1,1 @@
-# cellranger-dev
+# singcellranger
