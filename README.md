@@ -1,17 +1,36 @@
-### cellranger
+# cellranger
 
-Container version of the Cellranger single cell analysis pipeline from 10x Geomomics
+# A containerized version of the Cellranger single cell analysis pipeline
 
-The raw pipeline is available at: 
+This repository holds the source code for continuous integration and deployment of the cellranger container to [Singularity Hub](https://singularity-hub.org/)  
 
-https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger
+The raw pipeline is available from [10x Geomomics](https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger)
 
-Singularity was used as this is a unique container technology allowing to reproduce complete computational anlysis in many different computing resources : 
-- HPC (High Power Clusters)
-- Cloud (AWS, Google Cloud, Azure...)
+The latest generated container is available from [Singularity Hub](https://singularity-hub.org/collections/253/)
+
+# Singularity is a unique container technology:
+
+Singularity allows reproducing a complete computational analysis 
+ - operating system
+ - sofware libraries tools and pipelines
+ - data, analysis reports, figures...) 
+in a wide variety of computing resources : 
+- HPC (Universities High Performance Computing clusters)
+- Cloud (AWS, Google Cloud, Azure, Openstack, ...)
 - Mac OS (your laptop!)
 - Windows (your laptop!)
 
-Singularity is simpler to use and can import containers from other containers formats such as Docker
 
-A tutorial to install Singularity on MacOS or Windows and instructions to run the cellranger container are provided here: https://github.com/YeoLab/cellranger/blob/master/TUTORIAL.ipynb
+# Singularity is powerful and simple to use 
+
+See the [tutorial notebook](https://github.com/YeoLab/cellranger/blob/master/TUTORIAL.ipynb) to install Singularity on MacOS or Windows and instructions to run the cellranger container
+
+Singularity can import containers from other containers formats such as Docker.
+
+There are many more Bioinformatics contaimers available:
+ - [Singularity Hub](https://singularity-hub.org/)
+ - [Bio Containers](https://biocontainers.pro/)
+ - [Docker Hub] (https://hub.docker.com/)
+ - [Quay IO](https://quay.io/)
+
+
