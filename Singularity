@@ -77,7 +77,7 @@ BUILD_DATE 20170701
 %runscript
   # this will get copied to /.singularity.d/runscript indide the container
   # which will run whenever the container is called as an executable
-  set -x
+
   #####!/usr/bin/env bash
   #echo "command: $0"
   #echo first argument: $1
@@ -86,19 +86,21 @@ BUILD_DATE 20170701
 
   SUBCOMMAND="$1"
   
-  if [ $SUBCOMMAND = "getrefdata" ]
-  then
-    /opt/bin/getrefdata $2
-  elif [ $SUBCOMMAND = "getdemo" ]
-  then
-    /opt/bin/getdemo
-  else
-    #/opt/cellranger-2.0.0/cellranger $@
-    #cellranger $@
-    PREVIOUSPS1=$PS1
-    PS1=SINGULARITY":"$SINGULARITY_CONTAINER":"$PS1
+  #if [ $SUBCOMMAND = "getrefdata" ]
+  #then
+  #  /opt/bin/getrefdata $2
+  #elif [ $SUBCOMMAND = "getdemo" ]
+  #then
+  #  /opt/bin/getdemo
+  #else
+  #  #/opt/cellranger-2.0.0/cellranger $@
+  #  #cellranger $@
+  #  PREVIOUSPS1=$PS1
+  
+    PS1="$SINGULARITY_CONTAINER":"$PS1
     bash
     PS1=$PREVIOUSPS1
+  
   fi
 
 ###############################################################################
