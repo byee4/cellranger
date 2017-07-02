@@ -1,1 +1,1 @@
-# singcellranger
+# cellranger
