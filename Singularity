@@ -79,10 +79,10 @@ BUILD_DATE 20170701
   # which will run whenever the container is called as an executable
   set -x
   #####!/usr/bin/env bash
-  echo "command: $0"
-  echo first argument: $1
-  echo second argument: $2
-  echo "arguments: $@"
+  #echo "command: $0"
+  #echo first argument: $1
+  #echo second argument: $2
+  #echo "arguments: $@"
 
   SUBCOMMAND="$1"
   
@@ -93,10 +93,13 @@ BUILD_DATE 20170701
   then
     /opt/bin/getdemo
   else
-    /opt/cellranger-2.0.0/cellranger $@
+    #/opt/cellranger-2.0.0/cellranger $@
     #cellranger $@
+    PREVIOUSPS1=$PS1
+    PS1=SINGULARITY":"$SINGULARITY_CONTAINER":"$PS1
+    bash
+    PS1=$PREVIOUSPS1
   fi
-  set -x
 
 ###############################################################################
 %test
