@@ -12,20 +12,20 @@ The latest generated container is available from [Singularity Hub](https://singu
 
 Singularity allows simple porting and reproducing:
 
-It encompasses **the whole spectrum od resources for a computational analysis**:
+It encompasses the whole spectrum od resources for a computational analysis:
  - operating system
- - sofware libraries, tools, and pipelines
- - data, analysis, reports, figures
+ - sofware libraries tools and pipelines
+ - data, analysis reports, figures...) 
  
-It allows simple **reproducibility on a wide variety of computing resources**: 
-- HPC (University High Performance Computing Clusters)
-- Cloud (AWS, Google Cloud, Azure, Openstack)
+It allows simple reproducibility in a wide variety of computing resources: 
+- HPC (Universities High Performance Computing clusters)
+- Cloud (AWS, Google Cloud, Azure, Openstack, ...)
 - Mac OS (your laptop!)
 - Windows (your laptop!)
 
 ### Singularity is powerful and simple to use 
 
-See the [tutorial notebook](https://github.com/YeoLab/cellranger/blob/master/TUTORIAL.ipynb) to install Singularity on MacOS or Windows and instructions to run the cellranger container.
+See the [tutorial notebook](https://github.com/YeoLab/cellranger/blob/master/TUTORIAL.ipynb) to install Singularity on MacOS or Windows and instructions to run the cellranger container
 
 Singularity can import containers from other containers formats such as Docker.
 
