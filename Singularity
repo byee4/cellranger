@@ -88,13 +88,13 @@ BUILD_DATE 20170701
   
   if [ $SUBCOMMAND = "getrefdata" ]
   then
-    getrefdata $2
+    /opt/bin/getrefdata $2
   elif [ $SUBCOMMAND = "getdemo" ]
   then
-    getdemo
+    /opt/bin/getdemo
   else
-    #/opt/cellranger-2.0.0/cellranger ${@:1}
-    cellranger $@
+    /opt/cellranger-2.0.0/cellranger $@
+    #cellranger $@
   fi
   set -x
 
