@@ -1,6 +1,6 @@
 #!/bin/bash
 
-./cellranger count \
+cellranger count \
   --id=xH09 \
   --sample=xH09 \
   --fastqs=./fastqs \
