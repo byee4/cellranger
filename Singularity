@@ -77,10 +77,10 @@ BUILD_DATE 20170701
   # which will run whenever the container is called as an executable
 
   #####!/usr/bin/env bash
-  #echo "Arguments received: $*"
-  #exec /usr/bin/python "$@"
+  #echo "command: $0"
+  #echo "arguments: $@"
 
-  SUBCOMMAND=$1
+  SUBCOMMAND="$1"
   
   if [ $SUBCOMMAND = "getrefdata" ]
   then
@@ -89,8 +89,10 @@ BUILD_DATE 20170701
   then
     /opt/bin/getdemo
   else
-    /opt/cellranger-2.0.0/cellranger $@
-    $@
+    #/opt/cellranger-2.0.0/cellranger ${@:1}
+    set -x
+    cellranger $@
+    set +x  
   fi
 
 ###############################################################################
