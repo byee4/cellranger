@@ -39,7 +39,7 @@ cp -r cellranger-2.0.0 $SINGULARITY_ROOTFS/opt/
 %post
   # this is run inside the container to install all necessary packages
 
-  apt-get install nano unzip zip
+  #apt-get install nano unzip zip
 
   #  cd /opt
   # wget wget -O cellranger-2.0.0.tar.gz "http://cf.10xgenomics.com/releases/cell-exp/cellranger-2.0.0.tar.gz?Expires=1498884401&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cDovL2NmLjEweGdlbm9taWNzLmNvbS9yZWxlYXNlcy9jZWxsLWV4cC9jZWxscmFuZ2VyLTIuMC4wLnRhci5neiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTQ5ODg4NDQwMX19fV19&Signature=XXAmQ-kR~g~QuQnxU3AU6spcFYmXCSMMp0AUYET1a6gIq~~yaDmbe0vzcQdUtHZkDEo8~QezvKLeCVQ77IaqTaPUZd1rvdVVbmZ6bjy~St3fWcRoMOD1Pml6qpH-t7KG18z~eGnkBdCC8P7LC68grTIKsKfr8ipE1-5JTTntFN39vHpCZKOUgTp1qG6YuKMVOBMcq3Nt9dr3LScRoioPTHulAdFWTcG0V~5HQDgzwWlHiT-LIUL-ndhLBPh~hTbr8kOSbwLssO-hR1VNzvzbC6XA9vjst6CxDYj4cK4snrLZLxgXmwVK9zKqE2VjRpdWZMA-itAeelgjZp9c3x~q3g__&Key-Pair-Id=APKAI7S6A5RYOXBWRPDA"
