@@ -2,7 +2,7 @@
 
 ### A containerized version of the 10x Gemomics Cellranger pipeline
 
-This repository holds the source code for continuous integration and deployment of the 10x Gemomics Cellranger single cell analysis pipeline. 
+This repository holds the source code for continuous integration and deployment of a Singularity container for the 10x Gemomics Cellranger single cell analysis pipeline. 
 
 The raw pipeline is available from [10x Geomomics](https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger)
 
@@ -29,7 +29,7 @@ See the [tutorial notebook](https://github.com/YeoLab/cellranger/blob/master/TUT
 
 Singularity can import containers from other containers formats such as Docker.
 
-There are many more Bioinformatics contaimers available:
+There are many more Bioinformatics containers available:
  - [Singularity Hub](https://singularity-hub.org/)
  - [Bio Containers](https://biocontainers.pro/)
  - [Docker Hub](https://hub.docker.com/)
