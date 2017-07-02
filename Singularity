@@ -77,9 +77,13 @@ BUILD_DATE 20170701
   # this will get copied to /.singularity.d/runscript indide the container
   # which will run whenever the container is called as an executable
 
+  set -x
+
   #####!/usr/bin/env bash
-  #echo "command: $0"
-  #echo "arguments: $@"
+  echo "command: $0"
+  echo first argument: $1
+  echo second argument: $2
+  echo "arguments: $@"
 
   SUBCOMMAND="$1"
   
@@ -91,7 +95,6 @@ BUILD_DATE 20170701
     /opt/bin/getdemo
   else
     #/opt/cellranger-2.0.0/cellranger ${@:1}
-    set -x
     cellranger $@
     set +x  
   fi
