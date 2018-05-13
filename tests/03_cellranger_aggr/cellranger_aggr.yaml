@@ -1,0 +1,15 @@
+#!/usr/bin/env cellranger_aggr.cwl
+
+run_id: aggregated
+
+h5_basedirs:
+  -
+    class: Directory
+    path: inputs/tiny_01
+  -
+    class: Directory
+    path: inputs/tiny_02
+
+csv:
+  class: File
+  path: inputs/aggregate.csv
