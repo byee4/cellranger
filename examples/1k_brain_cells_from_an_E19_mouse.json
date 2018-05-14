@@ -1,0 +1,41 @@
+#!/usr/bin/env wf_cellranger.cwl
+{
+  "aggr_nickname": "aggregated_01",
+  "aggr_norm_method": "mapped",
+  "assay_protocol": "chemV2",
+  "contact_email": "bay001@ucsd.edu",
+  "experiment_nickname": "expt_01",
+  "experiment_start_date": "2018-05-13",
+  "experiment_summary": "summary of the experiment",
+  "extract_protocol_description": "extract protocol goes here",
+  "growth_protocol_description": "growth protocol goes here",
+  "investigator": "Brian Yee",
+  "library_construction_protocol": "library construction protocol goes here",
+  "library_strategy": "library strategy goes here",
+  "organism": "Mouse (MMU)",
+  "pi_name": "Gene Yeo",
+  "processing_date": "2018-05-13",
+  "sequencing_center": "10X",
+  "sequencing_date": "2018-01-01",
+  "treatment_protocol_description": "treatment protocol description goes here",
+  "samples": [
+    {
+      "library_nickname": "sample_01",
+      "library_prep": "PolyA select",
+      "sample_id": "neurons_900",
+      "fastq_dir": {
+        "path": "inputs/neurons_900_fastqs",
+        "class": "Directory"
+      },
+      "transcriptome": {
+        "path": "refdata-cellranger-hg19-1.2.0",
+        "class": "Directory"
+      },
+      "instrument_model": "Illumina HiSeq 4000",
+      "read1_length": 26,
+      "read2_length": 98,
+      "expect_cells": 3000,
+      "characteristics": []
+    }
+  ]
+}

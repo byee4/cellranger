@@ -9,13 +9,15 @@ requirements:
   - class: ScatterFeatureRequirement
 
 inputs:
-  investigator:
+
+  aggr_nickname:
     type: string
-  pi_name:
+  aggr_norm_method:
+    type: string
+    default: "mapped"
+  assay_protocol:
     type: string
   contact_email:
-    type: string
-  sequencing_center:
     type: string
   experiment_nickname:
     type: string
@@ -23,21 +25,22 @@ inputs:
     type: string
   experiment_summary:
     type: string
-  sequencing_date:
+  extract_protocol_description:
     type: string
-  processing_date:
+  growth_protocol_description:
     type: string
-  assay_protocol:
+  investigator:
     type: string
-  protocol_description:
+  library_construction_protocol:
+    type: string
+  library_strategy:
     type: string
   organism:
     type: string
-  aggr_nickname:
+  pi_name:
     type: string
-  aggr_norm_method:
+  processing_date:
     type: string
-    default: "mapped"
   samples:
     type:
       type: array
@@ -73,12 +76,17 @@ inputs:
                     type: string
                   value:
                     type: string
+  sequencing_center:
+    type: string
+  sequencing_date:
+    type: string
+  treatment_protocol_description:
+    type: string
 
 outputs:
   output_aggr_dir:
     type: Directory
     outputSource: step_cellranger_aggr/output_dir
-
   output_single_dir:
     type: Directory[]
     outputSource: step_cellranger_count/output
