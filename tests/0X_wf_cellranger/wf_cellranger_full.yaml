@@ -1,33 +1,41 @@
-#!/usr/bin/env wf_cellranger
-
-aggr_run_id: aggregated
-aggr_norm_method: "mapped"
-
-samples:
-  -
-    run_id: one
-    sample_id: one_s
-    fastq_dir:
-      class: Directory
-      path: inputs/fastqs
-    transcriptome:
-      class: Directory
-      path: inputs/refdata-cellranger-hg19-1.2.0
-  -
-    run_id: two
-    sample_id: two_s
-    fastq_dir:
-      class: Directory
-      path: inputs/fastqs
-    transcriptome:
-      class: Directory
-      path: inputs/refdata-cellranger-hg19-1.2.0
-  -
-    run_id: three
-    sample_id: three_s
-    fastq_dir:
-      class: Directory
-      path: inputs/fastqs
-    transcriptome:
-      class: Directory
-      path: inputs/refdata-cellranger-hg19-1.2.0
+#!/usr/bin/env cellranger-runner
+{
+  "aggr_nickname": "aggregated_01",
+  "aggr_norm_method": "mapped",
+  "assay_protocol": "chemV2",
+  "contact_email": "b",
+  "experiment_nickname": "expt_01",
+  "experiment_start_date": "2018-01-01",
+  "experiment_summary": "d",
+  "extract_protocol_description": "e",
+  "growth_protocol_description": "f",
+  "investigator": "c",
+  "library_construction_protocol": "a",
+  "library_strategy": "g",
+  "organism": "Human (HSA)",
+  "pi_name": "a",
+  "processing_date": "2018-01-01",
+  "sequencing_center": "b",
+  "sequencing_date": "2018-01-01",
+  "treatment_protocol_description": "c",
+  "transcriptome": {
+    "path": "inputs/refdata-cellranger-mm10-1.2.0",
+    "class": "Directory"
+  },
+  "samples": [
+    {
+      "library_nickname": "sample_01",
+      "library_prep": "PolyA select",
+      "sample_id": "YS-15",
+      "fastq_dir": {
+        "path": "inputs/yan",
+        "class": "Directory"
+      },
+      "instrument_model": "Illumina HiSeq 4000",
+      "read1_length": 26,
+      "read2_length": 98,
+      "expect_cells": 3000,
+      "characteristics": []
+    }
+  ]
+}

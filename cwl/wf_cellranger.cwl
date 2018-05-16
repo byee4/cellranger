@@ -55,8 +55,6 @@ inputs:
             type: Directory
           expect_cells:
             type: int
-          transcriptome:
-            type: Directory
           instrument_model:
             type: string
           read1_length:
@@ -80,6 +78,8 @@ inputs:
     type: string
   sequencing_date:
     type: string
+  transcriptome:
+    type: Directory
   treatment_protocol_description:
     type: string
 
@@ -101,7 +101,6 @@ steps:
       - library_nicknames
       - sample_ids
       - fastq_dirs
-      - transcriptome_dirs
       - expect_cells
 
   step_cellranger_count:
@@ -110,14 +109,13 @@ steps:
       - library_nickname
       - sample_id
       - fastqs
-      - transcriptome
       - expect_cells
     scatterMethod: dotproduct
     in:
       library_nickname: step_parse_samples/library_nicknames
       sample_id: step_parse_samples/sample_ids
       fastqs: step_parse_samples/fastq_dirs
-      transcriptome: step_parse_samples/transcriptome_dirs
+      transcriptome: transcriptome
       expect_cells: step_parse_samples/expect_cells
     out:
       - output
