@@ -221,8 +221,8 @@
                             },
                             sample_id: {
                                 type: "string",
-                                default: "sample_prefix",
-                                description: "See official documentation (<a href='https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/using/fastq-input'>--sample parameter</a>)"
+                                default: "",
+                                description: "The prefix of the files located inside the fastq directory. See official documentation (<a href='https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/using/fastq-input'>--sample parameter</a>)"
                             },
                             fastq_dir: {
                                 type: "object",
@@ -230,8 +230,8 @@
                                 properties: {
                                     path: {
                                         type: "string",
-                                        default: "path_to_fastq_directory",
-                                        description: "Base directory containing your fastq files. See official documentation (<a href='https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/using/fastq-input'>--fastqs</a>). You will upload this directory to the specified AWS bucket."
+                                        default: "",
+                                        description: "This is the name of the directory you are uploading to INSIDE fastq_dir. See official documentation (<a href='https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/using/fastq-input'>--fastqs</a>). You will upload this directory to the specified AWS bucket."
                                     },
                                     class: {
                                         type: "string",
