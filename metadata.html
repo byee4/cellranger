@@ -74,7 +74,7 @@
                 aggr_nickname: {
                     type: "string",
                     default: "aggregated_01",
-                    description: "The eventual output directory for the aggregated output (if multisample expt)."
+                    description: "The eventual output directory for the aggregated output (if multisample expt, you may leave as-is for single sample expts)."
                 },
                 aggr_norm_method: {
                     type: "string",
@@ -222,7 +222,7 @@
                             sample_id: {
                                 type: "string",
                                 default: "",
-                                description: "The prefix of the files located inside the fastq directory. See official documentation (<a href='https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/using/fastq-input'>--sample parameter</a>)"
+                                description: "(Optional) The prefix of the files located inside the fastq directory if processing only a selection of samples within a fastq directory. See official documentation (<a href='https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/using/fastq-input'>--sample parameter</a>)"
                             },
                             fastq_dir: {
                                 type: "object",
@@ -231,7 +231,7 @@
                                     path: {
                                         type: "string",
                                         default: "",
-                                        description: "This is the name of the directory you are uploading to INSIDE fastq_dir. See official documentation (<a href='https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/using/fastq-input'>--fastqs</a>). You will upload this directory to the specified AWS bucket."
+                                        description: "This is the name of the directory you are uploading to on AWS, INSIDE fastq_dir. See official documentation (<a href='https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/using/fastq-input'>--fastqs</a>). You will just need the toplevel name of the directory, not the full path."
                                     },
                                     class: {
                                         type: "string",
@@ -240,8 +240,7 @@
                                         ],
                                         description: "Leave as 'Directory'"
                                     }
-                                },
-                                description: "Name of the directory you are uploading to AWS or copying to TSCC. Typically this is the "
+                                }
                             },
                             instrument_model: {
                                 type: "string",
